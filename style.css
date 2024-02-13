@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e3e3e3;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  height: 85px;
+  padding-left: 10px;
+}
+
+.sub-row {
+  display: flex;
+  border-radius: 13px;
+  padding: 2px;
+  min-width: 0px;
+}
+
+.number {
+  font-size: 45px;
+  width: 70px;
+  height: 70px;
+  border-style: solid;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Protest Strike', sans-serif;
+  flex-grow: 0;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
+/* @media (max-width: 1000px) {
+  .number {
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+  }
+} */
+
+.row-red {
+  background-color: #d43d4e;
+}
+
+.sub-row-red {
+  background-color: #922f38;
+  position: relative;
+}
+
+.number-red {
+  background-color: #f8e0e5;
+  border-color: #922f38;
+  color: #d43d4e;
+}
+
+.row-yellow {
+  background-color: #fde35b;
+}
+
+.sub-row-yellow {
+  background-color: #d6a259;
+}
+
+.number-yellow {
+  background-color: #fdf9f1;
+  border-color: #d6a259;
+  color: #fde35b;
+}
+
+.row-green {
+  background-color: #469f5f;
+}
+
+.sub-row-green {
+  background-color: #427c54;
+}
+
+.number-green {
+  background-color: #ebf3f1;
+  border-color: #427c54;
+  color: #469f5f;
+}
+
+.row-blue {
+  background-color: #3a4b89;
+}
+
+.sub-row-blue {
+  background-color: #2d2e4a;
+}
+
+.number-blue {
+  background-color: #e4e0f1;
+  border-color: #2d2e4a;
+  color: #3a4b89;
+}
+
+/* Cross */
+.cross {
+  position: relative;
+}
+.cross::before,
+.cross::after {
+  content: '';
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+.cross::before {
+  border-bottom: 4px solid black;
+  /* -webkit-transform: skewY(-45deg); */
+  transform: skewY(-45deg);
+}
+.cross::after {
+  border-bottom: 4px solid black;
+  /* -webkit-transform: skewY(45deg); */
+  transform: skewY(45deg);
+}

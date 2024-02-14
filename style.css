@@ -24,7 +24,8 @@ body {
 }
 
 .number,
-.count {
+.count,
+.total {
   font-size: 55px;
   width: 100px;
   height: 100px;
@@ -39,12 +40,19 @@ body {
   -webkit-text-stroke-color: black;
 }
 
+.locked {
+  display: flex;
+  padding-left: 10px;
+  min-width: 0px;
+}
+
 @media (max-width: 1025px) {
   .row {
     height: 70px;
   }
   .number,
-  .count {
+  .count,
+  .total {
     font-size: 35px;
     width: 60px;
     height: 60px;
@@ -54,23 +62,107 @@ body {
 @media (max-width: 740px) {
   .row {
     height: 70px;
+    padding-left: 5px;
   }
   .number,
-  .count {
+  .count,
+  .total {
     font-size: 35px;
     width: 60px;
     height: 60px;
+  }
+  .locked {
+    padding-left: 5px;
+  }
+}
+
+@media (max-width: 700px) {
+  .row {
+    height: 70px;
+    padding-left: 5px;
+  }
+  .number,
+  .count,
+  .total {
+    font-size: 35px;
+    width: 50px;
+    height: 50px;
+  }
+  .locked {
+    padding-left: 5px;
+  }
+}
+
+@media (max-width: 600px) {
+  .row {
+    height: 60px;
+    padding-left: 0px;
+  }
+  .number,
+  .count,
+  .total {
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+  }
+  .locked {
+    padding-left: 5px;
+  }
+}
+
+@media (max-width: 560px) {
+  .row {
+    height: 50px;
+    padding-left: 0px;
+  }
+  .number,
+  .count,
+  .total {
+    font-size: 25px;
+    width: 40px;
+    height: 40px;
+  }
+  .locked {
+    padding-left: 5px;
+  }
+}
+
+@media (max-width: 500px) {
+  .row {
+    height: 45px;
+    padding-left: 0px;
+  }
+  .number,
+  .count,
+  .total {
+    font-size: 22px;
+    width: 35px;
+    height: 35px;
+  }
+  .locked {
+    padding-left: 0px;
+  }
+}
+
+@media (max-width: 405px) {
+  .row {
+    height: 45px;
+    padding-left: 0px;
+  }
+  .number,
+  .count,
+  .total {
+    font-size: 20px;
+    width: 32px;
+    height: 32px;
+  }
+  .locked {
+    padding-left: 0px;
   }
 }
 
 .count {
   background-color: lightgrey;
-}
-
-.locked {
-  display: flex;
-  padding-left: 10px;
-  min-width: 0;
 }
 
 .row-red {
@@ -82,7 +174,8 @@ body {
   position: relative;
 }
 
-.number-red {
+.number-red,
+.red-total {
   background-color: #f8e0e5;
   border-color: #922f38;
   color: #d43d4e;
@@ -96,7 +189,8 @@ body {
   background-color: #d6a259;
 }
 
-.number-yellow {
+.number-yellow,
+.yellow-total {
   background-color: #fdf9f1;
   border-color: #d6a259;
   color: #fde35b;
@@ -110,7 +204,8 @@ body {
   background-color: #427c54;
 }
 
-.number-green {
+.number-green,
+.green-total {
   background-color: #ebf3f1;
   border-color: #427c54;
   color: #469f5f;
@@ -124,10 +219,15 @@ body {
   background-color: #2d2e4a;
 }
 
-.number-blue {
+.number-blue,
+.blue-total {
   background-color: #e4e0f1;
   border-color: #2d2e4a;
   color: #3a4b89;
+}
+
+.total {
+  margin: 0px 10px;
 }
 
 /* Cross */

@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// Unlocked #12 if 5 in a row have .cross
+// Unlocked #12 and lock if 5 in a row have .cross
 // 1. Create the nodelist of all numbers
 const numberNodeList = document.querySelectorAll('.number');
 
@@ -88,7 +88,7 @@ function updateCrossCounts() {
   blueCrossCount = blueNumberBoxes.filter(box =>
     box.classList.contains('cross')
   ).length;
-  document.querySelector('.green-count').textContent = greenCrossCount;
+  document.querySelector('.blue-count').textContent = blueCrossCount;
 
   console.log(
     `R: ${redCrossCount}, Y:${yellowCrossCount}, G${greenCrossCount}, B:${blueCrossCount}`

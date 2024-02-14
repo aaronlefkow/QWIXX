@@ -46,7 +46,61 @@ body {
   min-width: 0px;
 }
 
-@media (max-width: 1025px) {
+.symbol {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.grand-total {
+  background-color: white;
+  margin-right: 30px;
+}
+
+.dice-group {
+  display: flex;
+  min-width: 0px;
+}
+
+@media (max-width: 1400px) {
+  .row {
+    height: 120px;
+  }
+  .number,
+  .count,
+  .total {
+    font-size: 50px;
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .row {
+    height: 100px;
+  }
+  .number,
+  .count,
+  .total {
+    font-size: 35px;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .row {
+    height: 80px;
+  }
+  .number,
+  .count,
+  .total {
+    font-size: 35px;
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 1000px) {
   .row {
     height: 70px;
   }
@@ -59,66 +113,49 @@ body {
   }
 }
 
-@media (max-width: 740px) {
+@media (max-width: 870px) {
   .row {
-    height: 70px;
+    height: 65px;
     padding-left: 5px;
   }
   .number,
   .count,
   .total {
     font-size: 35px;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
   }
   .locked {
-    padding-left: 5px;
+    padding-left: 0px;
   }
 }
 
 @media (max-width: 700px) {
   .row {
-    height: 70px;
+    height: 57px;
     padding-left: 5px;
   }
   .number,
   .count,
   .total {
     font-size: 35px;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
   }
   .locked {
     padding-left: 5px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .row {
-    height: 60px;
-    padding-left: 0px;
+    height: 50px;
+    padding-left: 5px;
   }
   .number,
   .count,
   .total {
     font-size: 30px;
-    width: 50px;
-    height: 50px;
-  }
-  .locked {
-    padding-left: 5px;
-  }
-}
-
-@media (max-width: 560px) {
-  .row {
-    height: 50px;
-    padding-left: 0px;
-  }
-  .number,
-  .count,
-  .total {
-    font-size: 25px;
     width: 40px;
     height: 40px;
   }
@@ -127,15 +164,32 @@ body {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .row {
     height: 45px;
+    padding-left: 5px;
+  }
+  .number,
+  .count,
+  .total {
+    font-size: 30px;
+    width: 35px;
+    height: 35px;
+  }
+  .locked {
+    padding-left: 5px;
+  }
+}
+
+@media (max-width: 550px) {
+  .row {
+    height: 40px;
     padding-left: 0px;
   }
   .number,
   .count,
   .total {
-    font-size: 22px;
+    font-size: 17px;
     width: 35px;
     height: 35px;
   }
@@ -144,15 +198,15 @@ body {
   }
 }
 
-@media (max-width: 405px) {
+@media (max-width: 540px) {
   .row {
-    height: 45px;
+    height: 40px;
     padding-left: 0px;
   }
   .number,
   .count,
   .total {
-    font-size: 20px;
+    font-size: 17px;
     width: 32px;
     height: 32px;
   }
@@ -227,7 +281,7 @@ body {
 }
 
 .total {
-  margin: 0px 10px;
+  margin: 0px 5px;
 }
 
 /* Cross */

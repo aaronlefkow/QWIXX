@@ -64,6 +64,31 @@ let yellowCrossCount = 0;
 let greenCrossCount = 0;
 let blueCrossCount = 0;
 
+//Dice Counts
+const diceNodeList = document.querySelectorAll('.dice');
+const diceBoxes = Array.from(diceNodeList);
+
+let diceCrossCount = 0;
+let diceCrossScore = 0;
+const dice = document.querySelectorAll('.dice');
+dice.forEach(function (dice) {
+  dice.addEventListener('click', function () {
+    dice.classList.toggle('cross');
+    updateDiceCrossCounts();
+    updateCrossCounts();
+  });
+});
+
+function updateDiceCrossCounts() {
+  // Update redCrossCount
+  diceCrossCount = diceBoxes.filter(box =>
+    box.classList.contains('cross')
+  ).length;
+
+  diceCrossScore = Number(diceCrossCount * -5);
+  console.log(typeof diceCrossScore, diceCrossScore);
+}
+
 // Function to update cross counts for each array
 function updateCrossCounts() {
   // Update redCrossCount
@@ -71,27 +96,40 @@ function updateCrossCounts() {
     box.classList.contains('cross')
   ).length;
   document.querySelector('.red-count').textContent = redCrossCount;
+  totalScore(redCrossCount, redTotal);
 
   // Update yellowCrossCount
   yellowCrossCount = yellowNumberBoxes.filter(box =>
     box.classList.contains('cross')
   ).length;
   document.querySelector('.yellow-count').textContent = yellowCrossCount;
+  totalScore(yellowCrossCount, yellowTotal);
 
   // Update greenCrossCount
   greenCrossCount = greenNumberBoxes.filter(box =>
     box.classList.contains('cross')
   ).length;
   document.querySelector('.green-count').textContent = greenCrossCount;
+  totalScore(greenCrossCount, greenTotal);
 
   // Update blueCrossCount
   blueCrossCount = blueNumberBoxes.filter(box =>
     box.classList.contains('cross')
   ).length;
   document.querySelector('.blue-count').textContent = blueCrossCount;
+  totalScore(blueCrossCount, blueTotal);
+
+  updateDiceCrossCounts();
+
+  grandTotal.textContent =
+    Number(redTotal.textContent) +
+    Number(yellowTotal.textContent) +
+    Number(greenTotal.textContent) +
+    Number(blueTotal.textContent) +
+    diceCrossScore;
 
   console.log(
-    `R: ${redCrossCount}, Y:${yellowCrossCount}, G${greenCrossCount}, B:${blueCrossCount}`
+    `R: ${redCrossCount}, Y:${yellowCrossCount}, G${greenCrossCount}, B:${blueCrossCount}, Dice: ${diceCrossScore}`
   );
 }
 
@@ -241,3 +279,40 @@ blueLockedLock.addEventListener('click', function () {
     }, 200);
   }
 });
+
+//Handle Totals
+const redTotal = document.querySelector('.red-total');
+const yellowTotal = document.querySelector('.yellow-total');
+const greenTotal = document.querySelector('.green-total');
+const blueTotal = document.querySelector('.blue-total');
+const grandTotal = document.querySelector('.grand-total');
+
+function totalScore(colorCrossCount, colorTotal) {
+  if (colorCrossCount === 0) {
+    colorTotal.textContent = 0;
+  } else if (colorCrossCount === 1) {
+    colorTotal.textContent = 1;
+  } else if (colorCrossCount === 2) {
+    colorTotal.textContent = 3;
+  } else if (colorCrossCount === 3) {
+    colorTotal.textContent = 6;
+  } else if (colorCrossCount === 4) {
+    colorTotal.textContent = 10;
+  } else if (colorCrossCount === 5) {
+    colorTotal.textContent = 15;
+  } else if (colorCrossCount === 6) {
+    colorTotal.textContent = 21;
+  } else if (colorCrossCount === 7) {
+    colorTotal.textContent = 28;
+  } else if (colorCrossCount === 8) {
+    colorTotal.textContent = 36;
+  } else if (colorCrossCount === 9) {
+    colorTotal.textContent = 45;
+  } else if (colorCrossCount === 10) {
+    colorTotal.textContent = 55;
+  } else if (colorCrossCount === 11) {
+    colorTotal.textContent = 66;
+  } else if (colorCrossCount === 12) colorTotal.textContent = 78;
+}
+
+// Dice Counts

@@ -12,7 +12,7 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 5px;
-  height: 80px;
+  height: 130px;
   padding-left: 10px;
 }
 
@@ -23,10 +23,11 @@ body {
   min-width: 0px;
 }
 
-.number {
-  font-size: 45px;
-  width: 70px;
-  height: 70px;
+.number,
+.count {
+  font-size: 55px;
+  width: 100px;
+  height: 100px;
   border-style: solid;
   border-radius: 15px;
   display: flex;
@@ -38,18 +39,39 @@ body {
   -webkit-text-stroke-color: black;
 }
 
-.locked {
-  display: flex;
-  padding-left: 5px;
+@media (max-width: 1025px) {
+  .row {
+    height: 70px;
+  }
+  .number,
+  .count {
+    font-size: 35px;
+    width: 60px;
+    height: 60px;
+  }
 }
 
-/* @media (max-width: 1000px) {
-  .number {
-    font-size: 20px;
-    width: 40px;
-    height: 40px;
+@media (max-width: 740px) {
+  .row {
+    height: 70px;
   }
-} */
+  .number,
+  .count {
+    font-size: 35px;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.count {
+  background-color: lightgrey;
+}
+
+.locked {
+  display: flex;
+  padding-left: 10px;
+  min-width: 0;
+}
 
 .row-red {
   background-color: #d43d4e;
@@ -133,7 +155,7 @@ body {
 
 .shake:hover {
   /* Start the shake animation and make the animation last for 0.5 seconds */
-  animation: shake 0.5s;
+  animation: shake 0.2s;
 }
 
 @keyframes shake {
